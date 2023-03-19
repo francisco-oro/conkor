@@ -1,0 +1,98 @@
+.btn {
+    &:link,
+    &:visited{
+        width: 20rem;
+        display: block;
+        text-transform: uppercase;
+        color: var(--color-ecru);
+        border: 2px solid var(--color-ecru);
+        background-color: var(--color-primary);
+        text-decoration: none;
+        padding: 2rem;
+        font-weight: 500;
+        font-size: 2rem;
+
+        background-size: 250%;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-ecru) 50%);
+        transition: all .4s;
+        transform: translateX(1rem);
+    }
+
+    &:hover,
+    &:active{
+        opacity: 1;
+    }
+    
+    &:hover,
+    &:active {
+        background-position: 100%;
+        color: var(--color-white);
+        border: transparent;
+    }
+}
+
+.services{
+    display: flex;
+    margin: 0 6rem;
+    flex-wrap: wrap;
+}
+
+.service-box{
+    background-color: var(--color-ecru);
+    width: 20rem;
+    // height: 7rem;
+    margin: 1.5rem;
+    flex: 1 1 30%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-decoration: none;
+    &__title{
+        color: var(--color-primary);
+        font-size: 2.3rem;
+        padding: 3rem 6rem 3rem 0;
+        font-weight: 500;
+        transform: translate(- 1.6rem);
+        transition: all .5s;
+    }
+
+    &__icon {
+        height: 11rem;
+        width: 4.8rem;
+        fill: var(--color-ecru);
+        opacity: 0;
+        transform: scale(.5);
+        transition: all .5s;
+    }
+
+    &:hover {
+        background-color: var(--color-primary);
+    }
+
+    &:hover &__title{
+        color: var(--color-white);
+        transform: translate(3rem);
+    }
+
+    &:hover &__icon {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+.suggestion-instance{
+    border-radius: 50%;
+    border: 3px solid var(--color-ecru);
+    width: 24rem;
+    height: 24rem;
+
+    background-size: cover;
+    background-position: center;
+
+    &-1{
+        background-image: url(featured-1.jpg);
+    }    
+    &-2{
+        background-image: url(featured-2.jpg);
+    }
+}

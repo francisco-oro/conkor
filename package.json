@@ -1,0 +1,20 @@
+{
+  "name": "conkor",
+  "version": "1.0.0",
+  "description": "Online bakery store",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass resources/css/sass/main.scss resources/css/style.css",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "conkor"
+  },
+  "author": "Francisco Oro",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.21"
+  }
+}

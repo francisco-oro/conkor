@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+:root {
+  /*COLORS*/
+  --color-primary:#5E1E0C;
+  --color-primary-light:#652814;
+  --color-black:#000;
+  --color-white:#fff;
+  --color-ecru:#D2BF8E;
+  --color-ecru-2:#EEE6D3;
+  --color-vanilla:#E4D8A3;
+  --color-vanilla-2:#D1BD61;
+  --color-raw-umber:#916545; }
+
+body {
+  font-family: 'work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: #777;
+  background-color: var(--color-raw-umber); }
+
+.btn:link, .btn:visited {
+  width: 20rem;
+  display: block;
+  text-transform: uppercase;
+  color: var(--color-ecru);
+  border: 2px solid var(--color-ecru);
+  background-color: var(--color-primary);
+  text-decoration: none;
+  padding: 2rem;
+  font-weight: 500;
+  font-size: 2rem;
+  background-size: 250%;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-ecru) 50%);
+  transition: all .4s;
+  transform: translateX(1rem); }
+
+.btn:hover, .btn:active {
+  opacity: 1; }
+
+.btn:hover, .btn:active {
+  background-position: 100%;
+  color: var(--color-white);
+  border: transparent; }
+
+.services {
+  display: flex;
+  margin: 0 6rem;
+  flex-wrap: wrap; }
+
+.service-box {
+  background-color: var(--color-ecru);
+  width: 20rem;
+  margin: 1.5rem;
+  flex: 1 1 30%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-decoration: none; }
+  .service-box__title {
+    color: var(--color-primary);
+    font-size: 2.3rem;
+    padding: 3rem 6rem 3rem 0;
+    font-weight: 500;
+    transform: translate(-1.6rem);
+    transition: all .5s; }
+  .service-box__icon {
+    height: 11rem;
+    width: 4.8rem;
+    fill: var(--color-ecru);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all .5s; }
+  .service-box:hover {
+    background-color: var(--color-primary); }
+  .service-box:hover .service-box__title {
+    color: var(--color-white);
+    transform: translate(3rem); }
+  .service-box:hover .service-box__icon {
+    opacity: 1;
+    transform: scale(1.4); }
+
+.suggestion-instance {
+  border-radius: 50%;
+  border: 3px solid var(--color-ecru);
+  width: 24rem;
+  height: 24rem;
+  background-size: cover;
+  background-position: center; }
+  .suggestion-instance-1 {
+    background-image: url(featured-1.jpg); }
+  .suggestion-instance-2 {
+    background-image: url(featured-2.jpg); }
+
+.header {
+  width: 100%;
+  height: 90vh;
+  background-size: 64rem;
+  background-position: 90% 48%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 3; }
+  .header__img {
+    width: 50%;
+    position: absolute;
+    transform: translate(90%, 5%); }
+  .header__bar {
+    display: flex;
+    justify-content: space-between; }
+  .header__logo {
+    position: relative;
+    height: 12rem;
+    width: auto;
+    border-radius: 200px; }
+  .header__main-nav {
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 5rem 2rem 0 0;
+    flex-wrap: wrap; }
+    .header__main-nav li {
+      margin-left: 4rem;
+      display: block; }
+      .header__main-nav li a:link,
+      .header__main-nav li a:visited {
+        color: var(--color-white);
+        text-decoration: none;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-bottom: .8rem;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom .4s;
+        -webkit-transition: border-bottom .4s; }
+      .header__main-nav li a:hover,
+      .header__main-nav li a:active {
+        border-bottom: 2px solid var(--color-ecru); }
+  .header__box {
+    position: absolute;
+    top: 35rem;
+    left: 20rem;
+    text-align: left; }
+    .header__box-text h1 {
+      font-size: 7rem;
+      color: var(--color-ecru);
+      font-weight: 500; }
+    .header__box-text h2 {
+      font-size: 6rem;
+      color: var(--color-white);
+      font-weight: 500;
+      width: 50%;
+      margin-bottom: 3rem; }
+
+.section-header h2 {
+  color: var(--color-ecru);
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.2rem; }
+
+.section-header h1 {
+  color: var(--color-vanilla-2);
+  font-size: 4.8rem;
+  text-transform: capitalize;
+  margin-bottom: 2.4rem; }
+
+.primary-background {
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-primary);
+  position: absolute; }
+
+.svg-wave {
+  position: absolute;
+  z-index: -1; }
+
+.section-services, .section-suggestions {
+  background-color: transparent;
+  text-align: center;
+  padding: 40rem 0 8rem; }
