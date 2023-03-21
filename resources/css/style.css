@@ -168,13 +168,18 @@ body {
 
 .container {
   width: 30%;
-  height: 55rem; }
+  height: 60rem;
+  margin: 0 auto;
+  position: relative; }
 
 .product-card {
   width: 100%;
   height: 55rem;
   background-color: var(--color-ecru-2);
-  border: 3px solid transparent; }
+  border: 3px solid transparent;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column; }
   .product-card:hover {
     border: 3px solid var(--color-vanilla-2); }
   .product-card__img img {
@@ -183,8 +188,8 @@ body {
   .product-card__stars {
     fill: gold; }
   .product-card__icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     margin: .5rem; }
   .product-card__footer {
     display: flex;
@@ -195,10 +200,59 @@ body {
     font-weight: 500;
     color: var(--color-primary); }
   .product-card__price {
-    color: var(--color-primary-light); }
+    color: var(--color-primary-light);
+    font-size: 1.9rem; }
   .product-card__btn {
-    display: inherit;
-    box-sizing: unset; }
+    margin: 0 auto; }
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; }
+  .carousel__slider {
+    display: flex;
+    width: 300%;
+    transition: all .4s; }
+  .carousel__radio-btn {
+    display: none; }
+  .carousel__nav {
+    display: flex;
+    order: 1;
+    justify-content: center; }
+  .carousel__radio-label {
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-ecru);
+    background-color: var(--color-white);
+    margin: 1.6rem;
+    cursor: pointer; }
+  .carousel__radio-btn:checked:nth-of-type(1) ~ .carousel__nav .carousel__radio-label:nth-of-type(1) {
+    background-color: var(--color-ecru); }
+  .carousel__radio-btn:checked:nth-of-type(2) ~ .carousel__nav .carousel__radio-label:nth-of-type(2) {
+    background-color: var(--color-ecru); }
+  .carousel__radio-btn:checked:nth-of-type(3) ~ .carousel__nav .carousel__radio-label:nth-of-type(3) {
+    background-color: var(--color-ecru); }
+  .carousel__radio-btn:checked:nth-last-of-type(2) ~ .carousel__slider {
+    translate: -33.33%; }
+  .carousel__radio-btn:checked:nth-last-of-type(1) ~ .carousel__slider {
+    translate: -66.66%; }
+
+.left-arrow, .right-arrow {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--color-ecru);
+  position: absolute;
+  cursor: pointer; }
+
+.left-arrow {
+  top: 50%;
+  left: -20%; }
+
+.right-arrow {
+  top: 50%;
+  right: -20%; }
 
 .header {
   width: 100%;
@@ -289,7 +343,7 @@ body {
   padding: 38rem 0 0; }
 
 .section-menu {
-  padding: 25rem 0 0;
+  padding: 26rem 0 0;
   text-align: center;
   background-color: transparent; }
 
@@ -297,4 +351,5 @@ body {
   height: 100vh; }
 
 .section-featured {
-  text-align: center; }
+  text-align: center;
+  padding: 30rem 0 0; }

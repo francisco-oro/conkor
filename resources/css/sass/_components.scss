@@ -187,7 +187,9 @@
 
 .container{
     width: 30%;
-    height: 55rem; 
+    height: 60rem; 
+    margin: 0 auto;
+    position: relative;
 }
 
 .product-card{
@@ -196,6 +198,9 @@
     background-color: var(--color-ecru-2);
     border: 3px solid transparent;
 
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
     &:hover{
         border: 3px solid var(--color-vanilla-2);
     }
@@ -209,8 +214,8 @@
     }
 
     &__icon {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
         margin: .5rem;
     }
 
@@ -228,10 +233,82 @@
 
     &__price{
         color: var(--color-primary-light);
+        font-size: 1.9rem;
     }
 
     &__btn{
-        display: inherit;
-        box-sizing: unset;
+        margin: 0 auto;
     }
+}
+
+.carousel{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    &__slider{
+        display: flex;
+        width: 300%;
+        transition: all .4s;
+    }
+
+
+    &__radio-btn{
+        // Radio buttons allow choosing only one option at the time. 
+        display: none;
+    }
+    &__nav{
+        display: flex;
+        // Set the order to 1 to make it come to the bottom, after all the elements, which have a 0 order by default.
+        order: 1;
+        justify-content: center;
+    }
+
+    &__radio-label{
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        border: 2px solid var(--color-ecru);
+        background-color: var(--color-white);
+        margin: 1.6rem;
+        cursor: pointer;
+    }
+
+    // Labels will change their color whenever checked
+    &__radio-btn:checked:nth-of-type(1) ~ &__nav &__radio-label:nth-of-type(1){
+        background-color: var(--color-ecru);
+    }
+
+    &__radio-btn:checked:nth-of-type(2) ~ &__nav &__radio-label:nth-of-type(2){
+        background-color: var(--color-ecru);
+    }
+
+    &__radio-btn:checked:nth-of-type(3) ~ &__nav &__radio-label:nth-of-type(3){
+        background-color: var(--color-ecru);
+    }
+
+    &__radio-btn:checked:nth-last-of-type(2) ~ &__slider{
+        translate: (-33.33%);
+    }
+    &__radio-btn:checked:nth-last-of-type(1) ~ &__slider{
+        translate: (-66.66%);
+    }
+}
+
+.left-arrow, .right-arrow{
+    width: 3rem;
+    height: 3rem;
+    fill: var(--color-ecru);
+    position: absolute;
+    cursor: pointer;
+}
+
+.left-arrow{
+    top: 50%;
+    left: -20%;
+}
+
+.right-arrow{
+    top: 50%;
+    right: -20%;
 }
